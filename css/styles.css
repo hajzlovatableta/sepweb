@@ -186,7 +186,7 @@ button {
 .hero-inner {
   position: relative;
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 7rem;
 }
 
 /* HERO heading = Montserrat Black */
@@ -213,8 +213,8 @@ button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.65rem 1.5rem;
-  border-radius: 999px;
+  padding: 8px 16px;
+  border-radius: 10px;
   font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", sans-serif;
   font-size: 0.95rem;
@@ -223,31 +223,34 @@ button {
   letter-spacing: 0.05em;
   border: 2px solid transparent;
   cursor: pointer;
-  transition: transform 0.14s ease, box-shadow 0.14s ease,
-    background 0.14s ease, color 0.14s ease, border-color 0.14s ease;
   white-space: nowrap;
 }
 
 .btn-primary {
   background: var(--green-light);
-  color: var(--green-dark);
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.24);
+  color: var(--off-white);
 }
 
 .btn-primary:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.3);
+   background-color: #59C745BF;
+}
+.btn-primary:focus{
+    scale: 0.9;
+    background-color: #59C745BF;
 }
 
 .btn-outline {
-  background: rgba(2, 8, 7, 0.7);
-  border-color: var(--off-white);
+  background: var(--green-dark);
   color: var(--off-white);
 }
 
 .btn-outline:hover {
-  background: var(--off-white);
-  color: var(--green-dark);
+  background: #0D1B1EBF;
+}
+
+.btn-outline:focus {
+    scale: 0.9;
+    background: #0D1B1EBF;
 }
 
 /* ABOUT CARD – now INSIDE hero */
@@ -289,21 +292,23 @@ button {
   max-width: 42rem;
 }
 
-.about-card .btn {
+.about-btn {
   margin-top: 1.5rem;
-  padding-inline: 1.75rem;
+  padding: 8px 16px;
   background: var(--green-dark);
   color: var(--off-white);
-  border-color: var(--green-dark);
-  box-shadow: var(--shadow-card);
   text-transform: none;
   letter-spacing: 0.03em;
   font-size: 0.95rem;
 }
 
-.about-card .btn:hover {
-  background: #071013;
-  transform: translateY(-1px);
+.about-btn:hover {
+    background: #0D1B1EBF;
+}
+
+.about-btn:focus {
+    scale: 0.9;
+    background: #0D1B1EBF;
 }
 
 /* -----------------------------
@@ -465,6 +470,10 @@ button {
     padding: 2.25rem 2.75rem;
   }
 
+   .hero-inner {
+    margin-bottom: 11rem;
+  }
+
   .headline-section {
     padding-top: 4.5rem;
   }
@@ -534,6 +543,10 @@ button {
     display: inline-flex;
     flex-direction: column;
     gap: 3px;
+  }
+
+  .hero-inner {
+    margin-bottom: 11rem;
   }
 
   .main-nav {
