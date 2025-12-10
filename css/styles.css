@@ -499,9 +499,6 @@ button {
 
 /* Desktop (≥1280px) – show full About card, no peek */
 @media (min-width: 1280px) {
-  .hero {
-  }
-
   .hero-title {
     font-size: 3.5rem;
   }
