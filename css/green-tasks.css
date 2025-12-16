@@ -90,7 +90,7 @@ button {
 }
 
 .logo-circle {
-    color: var(--green-light);
+  color: var(--green-light);
   font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", sans-serif;
   font-weight: 900;
@@ -152,56 +152,6 @@ button {
   transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
-/* -----------------------------
-   HERO + ABOUT INSIDE
------------------------------- */
-.hero {
-  position: relative;
-  background: radial-gradient(circle at top left, #163c30, #020807),
-    var(--green-dark);
-  color: var(--off-white);
-  padding-top: 7rem;
-  overflow: hidden;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: url("../img/bgsep.png");
-  background-size: cover;
-  background-position: center;
-  pointer-events: none;
-}
-
-.hero .container {
-  position: relative;
-}
-
-.hero-inner {
-  position: relative;
-  text-align: center;
-  margin-bottom: 7rem;
-}
-
-.hero-title {
-  font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", sans-serif;
-  font-size: clamp(2.5rem, 4vw, 3.5rem);
-  letter-spacing: 0.06em;
-  font-weight: 900; /* Black */
-  text-transform: uppercase;
-  text-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
-  margin-bottom: 1.75rem;
-}
-
-.hero-buttons {
-  display: inline-flex;
-  gap: 0.85rem;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
 .btn {
   display: inline-flex;
   align-items: center;
@@ -225,11 +175,12 @@ button {
 }
 
 .btn-primary:hover {
-   background-color: #59C745BF;
+  background-color: #59C745BF;
 }
-.btn-primary:focus{
-    scale: 0.9;
-    background-color: #59C745BF;
+
+btn-primary:focus {
+  scale: 0.9;
+  background-color: #59C745BF;
 }
 
 .btn-outline {
@@ -242,166 +193,158 @@ button {
 }
 
 .btn-outline:focus {
-    scale: 0.9;
-    background: #0D1B1EBF;
+  scale: 0.9;
+  background: #0D1B1EBF;
 }
 
-.about-wrapper {
-  position: relative;
-  max-width: 720px;
-  margin: 0 auto;
+/* -----------------------------
+   HERO
+------------------------------ */
+.hero {
+  background: var(--page-bg);
+  padding: 4rem 0 2rem 0;
 }
 
-.about-card {
-  background: var(--card-bg);
-  border-radius: 24px 24px 0 0;
-  padding: 2rem 2.25rem;
+.green-tasks {
+  background: var(--page-bg);
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 2.5rem;
+  align-items: center;
 }
 
-.section-label {
+.green-tasks-content {
+  max-width: 520px;
+}
+
+.green-tasks-heading {
   font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", sans-serif;
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--text-muted);
-  margin-bottom: 0.5rem;
+  font-size: 36px;
+  font-weight: 900;
+  margin-bottom: 1.1rem;
 }
 
-.section-title {
-  font-size: 28px;
-  font-weight: 700;
-  margin-bottom: 0.75rem;
-  color: var(--text-main);
-}
-
-.section-body {
+.green-tasks-text {
   font-size: 18px;
   color: var(--text-muted);
-  max-width: 42rem;
+  margin-bottom: 2rem;
 }
 
-.about-btn {
-  margin-top: 1.5rem;
-  padding: 8px 16px;
-  background: var(--green-dark);
-  color: var(--off-white);
-  text-transform: none;
-  letter-spacing: 0.03em;
-  font-size: 0.95rem;
-}
-
-.about-btn:hover {
-    background: #0D1B1EBF;
-}
-
-.about-btn:focus {
-    scale: 0.9;
-    background: #0D1B1EBF;
-}
-
-/* -----------------------------
-   CONTENT
------------------------------- */
-.headline-section {
-  padding-top: 3.5rem;
-}
-
-.headline-title {
-  font-size: 28px;
-  font-weight: 700;
-  color: var(--green-main);
-  margin-bottom: 0.4rem;
-}
-
-.headline-text {
-  font-size: 18px;
-  color: var(--text-muted);
-  max-width: 46rem;
-}
-
-.media-grid {
-  margin: 2.2rem 0 2.2rem 0;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.25rem;
-}
-
-.media-grid img {
-  width: 100%;
-  box-shadow: var(--shadow-card);
-}
-
-/* -----------------------------
-   TESTIMONIALS
------------------------------- */
-.testimonials-section {
-  padding-bottom: 4.5rem;
-}
-
-.testimonials-header {
-  margin-bottom: 1.5rem;
-}
-
-.testimonials-title {
-  font-size: 28px;
-  font-weight: 700;
-  color: var(--green-main);
-  margin-bottom: 0.25rem;
-}
-
-.testimonials-grid {
-  display: grid;
-  grid-template-columns: 1fr;
+.green-tasks-actions {
+  display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
 }
 
-.testimonial-card {
-  background: var(--card-bg);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-card);
-  padding: 1.2rem 1.4rem;
-  font-size: 16px;
+.green-tasks-image-wrapper {
+  border-radius: 32px;
+  overflow: hidden;
 }
 
-.testimonial-meta {
-  display: flex;
-  align-items: center;
-  gap: 0.85rem;
-  margin-bottom: 0.7rem;
+.green-tasks-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
 }
 
-.testimonial-avatar {
-  height: 32px;
-  width: 32px;
-  border-radius: 999px;
-  background: rgba(89, 199, 69, 0.08);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.85rem;
+/* -----------------------------
+   TASKS
+------------------------------ */
+
+.tasks-section {
+  padding: 3rem 0 4rem;
+}
+
+.tasks-heading {
   font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", sans-serif;
+  font-size: 32px;
+  font-weight: 900;
+  margin-bottom: 0.5rem;
+}
+
+.tasks-subtitle {
+  font-size: 16px;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
+.tasks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.task-card {
+  background: #cfeee2;
+  border-radius: 20px;
+  box-shadow: var(--shadow-card);
+  padding: 16px 16px 14px;
+  position: relative;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.35) 1px,
+      transparent 1px);
+  background-size: 3px 3px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.task-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.12);
+}
+
+.task-indicator {
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.task-indicator span {
+  width: 10px;
+  height: 18px;
+  border-radius: 4px;
+}
+
+.task-indicator .c1 {
+  background: #f9c74f;
+}
+
+.task-indicator .c2 {
+  background: #90dbf4;
+}
+
+.task-indicator .c3 {
+  background: #59c745;
+}
+
+.task-indicator .c4 {
+  background: #0d1b1e;
+}
+
+.task-title {
+  font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+  margin-bottom: 0.4rem;
+  padding-right: 8px;
+}
+
+.task-description {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 1.6rem;
+  padding-right: 8px;
+}
+
+.task-meta {
+  font-size: 0.85rem;
   font-weight: 700;
   color: var(--green-main);
-}
-
-.testimonial-name {
-  font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", sans-serif;
-  font-weight: 700;
-  font-size: 0.95rem;
-}
-
-.testimonial-role {
-  font-size: 0.8rem;
-  color: var(--text-muted);
-}
-
-.testimonial-text {
-  font-size: 0.9rem;
-  color: var(--text-main);
 }
 
 /* -----------------------------
@@ -448,29 +391,6 @@ button {
 ------------------------------ */
 
 @media (min-width: 800px) {
-  .about-card {
-    padding: 2.25rem 2.75rem;
-  }
-
-   .hero-inner {
-    margin-bottom: 11rem;
-  }
-
-  .headline-section {
-    padding-top: 4.5rem;
-  }
-
-  .media-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .media-grid img:nth-child(2) {
-    align-self: end;
-  }
-
-  .testimonials-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
 
   .footer-inner {
     font-size: 0.85rem;
@@ -486,26 +406,6 @@ button {
 }
 
 @media (min-width: 1280px) {
-  .hero-title {
-    font-size: 3.5rem;
-  }
-
-  .about-wrapper {
-    max-width: 820px;
-    height: auto;
-    overflow: visible;
-  }
-
-  .about-card {
-    transform: none;
-  }
-
-  .media-grid {
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 1.75rem;
-    row-gap: 1.5rem;
-  }
-
   .footer-inner {
     font-size: 0.9rem;
   }
@@ -516,10 +416,6 @@ button {
     display: inline-flex;
     flex-direction: column;
     gap: 3px;
-  }
-
-  .hero-inner {
-    margin-bottom: 11rem;
   }
 
   .main-nav {
@@ -547,12 +443,21 @@ button {
     gap: 0.8rem;
   }
 
-  .hero {
-    padding-top: 4.25rem;
+  .green-tasks {
+    grid-template-columns: 1fr;
+    place-items: center;
   }
 
-  .hero-title {
-    font-size: 2.6rem;
+  .green-tasks-content {
+    text-align: center;
+    place-items: center;
+  }
+
+  .green-tasks-actions {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 220px;
   }
 
   .site-footer {
@@ -560,13 +465,7 @@ button {
   }
 
   .footer-inner {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 0.5rem;
-  }
-
-  .footer-rights {
-    margin-left: 0;
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
